@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the Excel sheet
-df = pd.read_excel(r'.\hhtiedot\jalkiruoat.xlsx')
+df = pd.read_excel(r'.\hhtiedot\peruna.xlsx')
 print(df.columns)
 # Create a list to store the formatted data
 formatted_data = []
@@ -30,13 +30,13 @@ for i in range(len(df)):
                        f"    defaultServingSize: {serving_number},\n" \
                        f"    servingSizeMeasurement: '{serving_measurement}',\n" \
                        f"    category: Category(\n" \
-                       f"        name: 'Jälkiruoat',\n" \
-                        f"       image: 'assets/images/dessert.png')),\n" \
+                       f"        name: 'Lisukkeet',\n" \
+                        f"       image: 'assets/image/potato.png')),\n" \
                        f")"
 
     # Add the formatted string to the list
     formatted_data.append(formatted_string)
 
 # Print the formatted data
-with open('.\outputs\outputjalkiruoat.txt', 'w', encoding='utf-8') as file:
+with open('.\outputs\outputperuna.txt', 'w', encoding='utf-8') as file:
     file.writelines('\n'.join(formatted_data))

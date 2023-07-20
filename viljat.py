@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the Excel sheet
-df = pd.read_excel(r'C:\Users\petru\Documents\coding\hhtiedot\viljat.xlsx')
+df = pd.read_excel(r'.\hhtiedot\viljat.xlsx')
 
 # Create a list to store the formatted data
 formatted_data = []
@@ -38,5 +38,5 @@ for i in range(len(df)):
     formatted_data.append(formatted_string)
 
 # Print the formatted data
-with open('outputviljat.txt', 'w', encoding='utf-8') as file:
+with open('.\outputs\outputviljat.txt', 'w', encoding='utf-8') as file:
     file.writelines('\n'.join(formatted_data))
