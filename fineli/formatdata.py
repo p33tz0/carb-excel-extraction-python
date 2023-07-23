@@ -34,10 +34,6 @@ def format_data(input_file):
 
     # Join the foods into a single string
     output = '\n'.join(foods)
-    
-        # Print the foods list and the output string for debugging
-    print(f'Foods list for {input_file}: {foods}')
-    print(f'Output string for {input_file}: {output}')
 
     # Generate the output file name
     output_file = category + '_' + subcategory + '-output.txt'
